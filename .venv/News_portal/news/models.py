@@ -13,7 +13,7 @@ class Author (models.Model):
 
     def update_rating(self):
         #Post reiting
-        post_rating = sum(post.rating * 3 for post in self.post_set.all())
+        post_ratings = sum(post.rating * 3 for post in self.post_set.all())
 
         #Comment avtor
         comment_avtor_reiting = sum(comment.rating for comment in self.user.comment_set.all())
@@ -21,7 +21,7 @@ class Author (models.Model):
         #Comment avtor in post
         comment_ratings_on_author_posts = sum(comment.rating for post in self.post_set.all() for comment in post.comment_set.all())
 
-        self.rating = post_rating + comment_avtor_reiting + comment_ratings_on_author_posts
+        self.rating = post_ratings + comment_avtor_reiting + comment_ratings_on_author_posts
         self.save()
 
 class Category(models.Model):
