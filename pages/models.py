@@ -1,5 +1,4 @@
 from django.db import models
-<<<<<<< HEAD
 from django.contrib.auth.models import User
 
 class Author(models.Model):
@@ -70,7 +69,4 @@ class Comment(models.Model):
     def dislike(self):
         self.rating -= 1
         self.save()
-=======
 
-# Create your models here.
->>>>>>> 676fd1a69fc1cf9762679da630f4f9180630109b

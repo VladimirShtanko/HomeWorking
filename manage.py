@@ -6,11 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
-<<<<<<< HEAD
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'NewsPortal.settings')
-=======
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'staticpages.settings')
->>>>>>> 676fd1a69fc1cf9762679da630f4f9180630109b
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
