@@ -1,0 +1,63 @@
+let word_clear = prompt(" input word")
+ const normal_word = word_clear.replace(/\s/g,'').toLowerCase();
+ const isPalidrom = normal_word.split('').reverse().join('');
+ if (word_clear === isPalidrom){
+    console.log(`Слово ${word_clear} является палидромом`)
+ }else{
+    console.log(`Слово ${word_clear}  не является палидромом`)
+ }
+
+
+
+
+ const arr = [1, 2, 3, 1, 5, 4, 2, 3, 5, 'they', 'don\'t', 'know', 'that', 'we', 'know', 'that', 'they', 'know' ]; 
+ const newArr = [...new Set(arr)]
+ console.log(newArr)
+const number = +prompt('Ведите любое число');
+let resArray = [];
+if (number === Number){
+    for (let i=0; i<=number; i++){
+        resArray.push(i)
+    }
+
+    console.log(resArray)}
+
+else{
+        console.log('Введите корректное число')
+    }
+
+
+
+
+const arr = [
+    ['x','o','x'],
+    ['o','x','o'],
+    ['x','o','x']
+];
+
+for (let row of arr){
+    console.log(arr.join(' '));
+}
+
+
+
+
+
+
+ const obj = {
+        some: 'some',
+        dom: 'text',
+        arr: [1, 2, 3, 4, 5],
+        tom: 'there'
+    };
+
+const arrValues = [];
+
+for (let key in obj){
+    if (Array.isArray(obj[key])){ 
+        arrValues.push(...obj[key])
+    }else{
+        arrValues.push(obj[key])
+    }
+}
+console.log(arrValues)
